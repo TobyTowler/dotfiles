@@ -38,7 +38,15 @@ alias l='ls -a'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # Neovim Configs
-alias nvc='NVIM_APPNAME=nvChad nvim'
+alias nvk='NVIM_APPNAME=nvKickstarter nvim'
 
 # Java Compilation command
 alias javcomp='javac -d . ../src/*'
+alias javcomp='javac -d . ../../src/java/*'
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+#Exit binds
+alias :q='exit'
