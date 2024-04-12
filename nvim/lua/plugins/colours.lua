@@ -1,5 +1,8 @@
 return {
-    { "catppuccin/nvim" },
+    {
+        "catppuccin/nvim",
+    },
+
     {
         "LazyVim/LazyVim",
         opts = {
