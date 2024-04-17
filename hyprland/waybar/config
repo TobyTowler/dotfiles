@@ -5,11 +5,10 @@
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
-    "height": 0,
+    "height": -2000,
 
     "modules-left": [
     "clock",
-    "custom/weather"
     ],
 
     "modules-center": [
@@ -18,10 +17,7 @@
 
     "modules-right": [
         "tray",
-        "custom/updates",
         "pulseaudio",
-        "pulseaudio#microphone",
-        "custom/weather",
         "cpu",
         "temperature",
         "memory"
@@ -31,26 +27,11 @@
     "hyprland/window": {
         "format": "{}"
     },
+
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "on-click": "activate",
-        "persistent_workspaces": {
-            "1": []
-        }
-    },
-    "hyprland/language": {
-        "format": "{}",
-        "format-en": "UK",
-        "format-ru": "RU",
-        "format-ka": "GE"
-    },
-   "custom/weather" : {
-        "tooltip" : true,
-        "format" : "{}",
-        "interval" : 30,
-        "exec" : "~/.config/waybar/scripts/waybar-wttr.py",
-        "return-type" : "json"
     },
     "tray": {
         "icon-size": 16,
@@ -81,15 +62,7 @@
             "default": ["", "", ""]
         }
     },
-    "pulseaudio#microphone": {
-        "format": "{format_source}",
-        "format-source": "🎙{volume}%",
-        "format-source-muted": "🎙Muted",
-        "on-click": "pamixer --default-source -t",
-        "on-scroll-up": "pamixer --default-source -i 5",
-        "on-scroll-down": "pamixer --default-source -d 5",
-        "scroll-step": 5
-    },
+
     "temperature": {
         "thermal-zone": 2,
         "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
@@ -98,9 +71,10 @@
         "format": "{icon} {temperatureC}°C",
         "format-icons": ["", "", ""]
     },
+
     "cpu": {
         "format": " {usage}%",
-//        "tooltip": false
+        "tooltip": false
     },
     "memory": {
         "format": " {}%"
