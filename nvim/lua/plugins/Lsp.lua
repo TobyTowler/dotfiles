@@ -18,9 +18,9 @@ return {
 	},
 
 	config = function()
-		vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
-		vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, {})
-		vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+		vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+		vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
+		vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code actions" })
 
 		local cmp = require("cmp")
 		local cmp_lsp = require("cmp_nvim_lsp")
