@@ -35,7 +35,6 @@ export PS1=" \e[0;36m\W\e[0m \[\e[91m\]\$(parse_git_branch)\e[0;36m🌧️\e[0m 
 alias nv='nvim'
 alias l='ls -a'
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # Neovim Configs
 alias nvc='NVIM_APPNAME=nvimCustom nvim'
@@ -50,3 +49,4 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 #Exit binds
 alias :q='exit'
+alias :wqa='exit'
