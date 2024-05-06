@@ -9,6 +9,10 @@ return {
 		local map = vim.api.nvim_set_keymap
 		local opts = { noremap = true, silent = true }
 
+		-- Move to previous/next
+		map("n", "<S-h>", "<Cmd>BufferPrevious<CR>", opts)
+		map("n", "<S-l>", "<Cmd>BufferNext<CR>", opts)
+
 		-- Ce-order to previous/next
 		map("n", "<C-<>", "<Cmd>BufferMovePrevious<CR>", opts)
 		map("n", "<C->>", "<Cmd>BufferMoveNext<CR>", opts)
@@ -39,21 +43,6 @@ return {
 		auto_hide = 1,
 
 		animation = false,
-
-		sidebar_filetypes = {
-			-- Use the default values: {event = 'BufWinLeave', text = '', align = 'left'}
-			["neo-tree"] = {
-				text = "Files",
-			},
-			-- Or, specify the text used for the offset:
-			undotree = {
-				text = "undotree",
-			},
-			-- Or, specify the event which the sidebar executes when leaving:
-			-- ["neo-tree"] = { event = "BufWipeout" },
-			-- Or, specify all three
-			-- Outline = { event = "BufWinLeave", text = "symbols-outline", align = "right" },
-		},
 	},
 	version = "^1.0.0", -- optional: only update when a new 1.x version is released
 }

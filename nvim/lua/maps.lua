@@ -15,8 +15,8 @@ map("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Wi
 map("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
 
 -- Change Tabs
-map("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
-map("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
+-- map("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
+-- map("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 
 -- move lines in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
