@@ -39,7 +39,7 @@
         "clock": {
             //"format": "{: %R   %d/%m}",
             //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-            "format": "󰥔   {:%H:%M  %A, %B %e}",
+            "format": "󰥔  {:%H:%M  %A, %B %e}",
             "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
             "interval": 60,
         },
