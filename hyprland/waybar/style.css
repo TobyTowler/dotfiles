@@ -75,5 +75,12 @@ window#waybar {
 
 #clock {
     margin-right: 12px;
+}
 
+#battery.critical {
+    color: #e19239;
+}
+
+#battery.warning {
+    color: #e94b33;
 }
