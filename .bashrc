@@ -50,3 +50,8 @@ export SDKMAN_DIR="$HOME/.sdkman"
 #Exit binds
 alias :q='exit'
 alias :wqa='exit'
+
+#FZF stuff
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+#Bind alt-d instead of alt c
+bind -m emacs-standard '"\ed": " \C-b\C-k \C-u`__fzf_cd__`\e\C-e\er\C-m\C-y\C-h\e \C-y\ey\C-x\C-x\C-d"'
