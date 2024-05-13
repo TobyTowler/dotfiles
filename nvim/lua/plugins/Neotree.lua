@@ -8,7 +8,7 @@ return {
 		-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 	},
 	config = function()
-		vim.keymap.set("n", "<leader>E", ":Neotree toggle <Cr>", {})
+		vim.keymap.set("n", "<leader>E", ":Neotree toggle right <Cr>", {})
 		vim.keymap.set("n", "<leader>e", ":Neotree toggle current<Cr>", {})
 	end,
 }
