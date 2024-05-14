@@ -14,8 +14,8 @@ return {
 		map("n", "<S-l>", "<Cmd>BufferNext<CR>", opts)
 
 		-- Ce-order to previous/next
-		map("n", "<C-<>", "<Cmd>BufferMovePrevious<CR>", opts)
-		map("n", "<C->>", "<Cmd>BufferMoveNext<CR>", opts)
+		map("n", "<C-,>", "<Cmd>BufferMovePrevious<CR>", opts)
+		map("n", "<C-.>", "<Cmd>BufferMoveNext<CR>", opts)
 
 		-- Goto buffer in position...
 		map("n", "<C-1>", "<Cmd>BufferGoto 1<CR>", opts)
