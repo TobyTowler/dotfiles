@@ -85,12 +85,12 @@ return {
 				["<Cr>"] = cmp.mapping.confirm({ select = true }),
 				["<C-<Cr>>"] = cmp.mapping.complete(),
 			}),
-			sources = cmp.config.sources({
+			sources = {
 				{ name = "nvim_lsp" },
-				{ name = "luasnip" }, -- For luasnip users.
-			}, {
+				{ name = "luasnip" },
 				{ name = "buffer" },
-			}),
+				{ name = "path" },
+			},
 		})
 
 		vim.diagnostic.config({

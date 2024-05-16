@@ -13,19 +13,19 @@ return {
 			),
 			vim.api.nvim_set_keymap(
 				"n",
-				"<leader>g",
+				"<leader>fg",
 				[[<Cmd>lua require"fzf-lua".grep_project()<CR>]],
 				{ desc = "grep" }
 			),
 			vim.api.nvim_set_keymap(
 				"n",
-				"<C-b>",
+				"<leader>fb",
 				[[<Cmd>lua require"fzf-lua".buffers()<CR>]],
 				{ desc = "find buffers" }
 			),
 			vim.api.nvim_set_keymap(
 				"n",
-				"<leader>k",
+				"<leader>fk",
 				[[<Cmd>lua require"fzf-lua".builtin()<CR>]],
 				{ desc = "find keymaps" }
 			),
