@@ -7,8 +7,7 @@
         "gtk-layer-shell": true,
         "height": -2000,
 
-        "modules-left": [
-            "clock",
+        "modules-left": [ "clock",
         ],
 
         "modules-center": [
@@ -82,11 +81,11 @@
 
         "battery": {
             "states": {
-                "warning": 95,
-                "critical": 15
+                "warning": 25,
+                "critical": 10
             },
             "format": "󱐋 {capacity}%",
             "format-charging": " {capacity}%",
-            "format-plugged": "{capacity}% 🔌 "
+            "format-plugged": "🔌 {capacity}% "
         }
 }
