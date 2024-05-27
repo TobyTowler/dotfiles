@@ -14,10 +14,10 @@ vim.api.nvim_create_autocmd({ "VimResized" }, {
 	end,
 })
 
--- Neotree on launch
-vim.api.nvim_create_autocmd("VimEnter", {
-	command = "set nornu nonu | Neotree toggle current",
-})
-vim.api.nvim_create_autocmd("BufEnter", {
-	command = "set rnu nu",
-})
+--Neotree on launch
+-- vim.api.nvim_create_autocmd("VimEnter", {
+-- 	command = "set nornu nonu | Neotree toggle current",
+-- })
+-- vim.api.nvim_create_autocmd("BufEnter", {
+-- 	command = "set rnu nu",
+-- })

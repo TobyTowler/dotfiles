@@ -5,9 +5,14 @@ return {
 		"nvim-lua/plenary.nvim",
 		"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
 		"MunifTanjim/nui.nvim",
-		-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 	},
 	config = function()
+		require("neo-tree").setup({
+			lazy = false,
+			filesystem = {
+				hijack_netrw_behavior = "open_current",
+			},
+		})
 		vim.keymap.set("n", "<leader>E", ":Neotree toggle right <Cr>", {})
 		vim.keymap.set("n", "<leader>e", ":Neotree toggle current<Cr>", {})
 	end,

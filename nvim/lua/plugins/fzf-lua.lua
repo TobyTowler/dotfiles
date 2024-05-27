@@ -7,7 +7,7 @@ return {
 		require("fzf-lua").setup({
 			vim.api.nvim_set_keymap(
 				"n",
-				"<leader>p",
+				"<leader>fp",
 				[[<Cmd>lua require"fzf-lua".files()<CR>]],
 				{ desc = "find files" }
 			),
