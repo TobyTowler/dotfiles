@@ -25,3 +25,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- copy/paste to clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set({ "n", "v" }, "<leader>p", [["+p]])
+
+--save File
+map({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
