@@ -18,7 +18,6 @@ vim.g.autoformat = true
 vim.opt.cursorline = true
 vim.opt.confirm = true    -- Confirm to save changes before exiting modified buffere
 vim.opt.ignorecase = true -- Ignore case
-vim.opt.expandtab = true
 
 -- Undo stuff
 vim.opt.swapfile = false
