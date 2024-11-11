@@ -7,7 +7,7 @@ return {
         require("fzf-lua").setup({
             vim.api.nvim_set_keymap(
                 "n",
-                "<leader>fp",
+                "<leader>f",
                 [[<Cmd>lua require"fzf-lua".files()<CR>]],
                 { desc = "find files" }
             ),
@@ -19,21 +19,21 @@ return {
             ),
             vim.api.nvim_set_keymap(
                 "n",
-                "<leader>fg",
+                "<leader>g",
                 [[<Cmd>lua require"fzf-lua".grep_project()<CR>]],
                 { desc = "grep" }
             ),
             vim.api.nvim_set_keymap(
                 "n",
-                "<leader>fb",
+                "<leader>b",
                 [[<Cmd>lua require"fzf-lua".buffers()<CR>]],
                 { desc = "find buffers" }
             ),
             vim.api.nvim_set_keymap(
                 "n",
-                "<leader>fk",
+                "<leader>k",
                 [[<Cmd>lua require"fzf-lua".builtin()<CR>]],
-                { desc = "find keymaps" }
+                { desc = "find everything" }
             ),
         })
     end,
