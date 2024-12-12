@@ -30,5 +30,5 @@ vim.opt.termguicolors = true
 -- highlight command text
 vim.opt.inccommand = "split"
 
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
