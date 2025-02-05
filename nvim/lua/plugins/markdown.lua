@@ -11,15 +11,13 @@ return {
                 heading = {
                     backgrounds = { '' },
                     icons = { '<> ' },
-                    -- border = true,
-                    -- below = '‾',
-                    -- above = '',
+                    position = 'inline',
                 },
 
                 bullet = {
                     left_pad = 1,
-                }
-
+                },
+                indent = { enabled = true },
 
             })
         end

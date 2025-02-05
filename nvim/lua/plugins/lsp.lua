@@ -13,9 +13,11 @@ return {
         "j-hui/fidget.nvim",
     },
 
+
     opts = {
         autoformat = true,
     },
+
 
     config = function()
         vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "Go to definition" })
