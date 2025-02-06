@@ -14,9 +14,39 @@ return {
         },
     },
     config = function()
-
         require("mason").setup()
-        require("mason-lspconfig").setup()
+
+        require("mason-lspconfig").setup({
+            handlers = {
+                function(server_name) -- default handler (optional)
+                    require("lspconfig")[server_name].setup({
+                        capabilities = capabilities,
+                    })
+                end,
+
+                ["lua_ls"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.lua_ls.setup({
+                        capabilities = capabilities,
+                        settings = {
+                            Lua = {
+                                runtime = { version = "Lua 5.1" },
+                                diagnostics = {
+                                    globals = { "vim", "it", "describe", "before_each", "after_each" },
+                                },
+                            },
+                        },
+                    })
+                end,
+            },
+        })
+
+
+        opts = {
+            autoformat = true,
+        }
+
+
         local capabilities = require('blink.cmp').get_lsp_capabilities()
         require("lspconfig").lua_ls.setup { capabilites = capabilities }
 
@@ -37,5 +67,18 @@ return {
             end,
         })
 
+
+        vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+        vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
+        vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code actions" })
+        vim.keymap.set("n", "K", function()
+            vim.lsp.buf.hover()
+        end)
+        vim.keymap.set("n", "[d", function()
+            vim.diagnostic.goto_next()
+        end)
+        vim.keymap.set("n", "]d", function()
+            vim.diagnostic.goto_prev()
+        end)
     end,
 }
