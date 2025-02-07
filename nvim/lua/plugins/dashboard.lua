@@ -52,7 +52,7 @@ return {
                         action = "FzfLua files",
                         icon = "🔎 ",
                         desc = " Find File           ",
-                        key = "p",
+                        key = "f",
                         key_format = " %s", -- remove default surrounding `[]`
                     },
                     {
@@ -63,7 +63,7 @@ return {
                         key_format = " %s", -- remove default surrounding `[]`
                     },
                     {
-                        action = ":e $MYVIMRC | cd %:p:h",
+                        action = ":FzfLua files cwd=~/.config/nvim",
                         icon = "❓ ",
                         desc = " Find Dotfiles",
                         key = "d",

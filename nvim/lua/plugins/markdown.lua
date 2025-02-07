@@ -17,7 +17,7 @@ return {
                 bullet = {
                     left_pad = 1,
                 },
-                indent = { enabled = true },
+                -- indent = { enabled = true },
 
             })
         end
