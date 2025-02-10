@@ -13,6 +13,7 @@ return {
                 ['<C-j>'] = { 'select_next', 'fallback' },
                 ['<Tab>'] = { 'select_and_accept' },
                 ['<C-CR>'] = { 'select_and_accept' },
+                ['<S-CR>'] = { 'select_and_accept' },
             },
 
             appearance = {

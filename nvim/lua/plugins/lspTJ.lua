@@ -16,6 +16,7 @@ return {
     config = function()
         require("mason").setup()
 
+        local capabilities = require('blink.cmp').get_lsp_capabilities()
         require("mason-lspconfig").setup({
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -47,7 +48,6 @@ return {
         }
 
 
-        local capabilities = require('blink.cmp').get_lsp_capabilities()
         require("lspconfig").lua_ls.setup { capabilites = capabilities }
 
         vim.api.nvim_create_autocmd('LspAttach', {

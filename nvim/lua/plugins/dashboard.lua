@@ -63,7 +63,10 @@ return {
                         key_format = " %s", -- remove default surrounding `[]`
                     },
                     {
-                        action = ":FzfLua files cwd=~/.config/nvim",
+                        action = function()
+                            vim.cmd("cd ~/.config/nvim") -- Change directory
+                            require("fzf-lua").files()   -- Open fzf-lua file picker
+                        end,
                         icon = "❓ ",
                         desc = " Find Dotfiles",
                         key = "d",
