@@ -58,7 +58,7 @@ return {
             vim.api.nvim_set_keymap(
                 "n",
                 "<leader>fd",
-                [[<Cmd>lua require"fzf-lua".lsp_workspace_diagnostics<CR>]],
+                [[<Cmd>lua require"fzf-lua".lsp_workspace_diagnostics()<CR>]],
                 { desc = "diagnostics" }
             ),
             vim.api.nvim_set_keymap(
