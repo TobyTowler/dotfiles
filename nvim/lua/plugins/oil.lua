@@ -23,6 +23,7 @@ return {
         -- end,
 
         dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
+        -- dependencies = { 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
     },
 
 

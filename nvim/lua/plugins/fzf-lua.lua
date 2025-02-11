@@ -73,6 +73,12 @@ return {
                 [[<Cmd>lua require"fzf-lua".builtin()<CR>]],
                 { desc = "builtin" }
             ),
+            vim.api.nvim_set_keymap(
+                "n",
+                "<leader>fr",
+                [[<Cmd>lua require"fzf-lua".lsp_references()<CR>]],
+                { desc = "lsp references" }
+            ),
         })
     end,
 }
