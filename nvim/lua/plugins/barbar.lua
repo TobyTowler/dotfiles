@@ -1,13 +1,15 @@
 return {
     "romgrk/barbar.nvim",
     dependencies = {
-        "lewis6991/gitsigns.nvim", -- OPTIONAL: for git status
+        "lewis6991/gitsigns.nvim",     -- OPTIONAL: for git status
         "nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
     },
     init = function()
         vim.g.barbar_auto_setup = false
         local map = vim.api.nvim_set_keymap
         local opts = { noremap = true, silent = true }
+        -- Magic buffer-picking mode
+        map('n', '<C-b>', '<Cmd>BufferPick<CR>', opts)
 
         -- Move to previous/next
         map("n", "<S-h>", "<Cmd>BufferPrevious<CR>", opts)
@@ -30,10 +32,11 @@ return {
         map("n", "<C-0>", "<Cmd>BufferLast<CR>", opts)
 
         -- Pin/unpin buffer
-        map("n", "<C-x>", "<Cmd>BufferPin<CR>", opts)
+        map("n", "<C-p>", "<Cmd>BufferPin<CR>", opts)
 
         -- Close buffer
         map("n", "<S-x>", "<Cmd>BufferClose<CR>", opts)
+        map("n", "<C-X>", "<Cmd>BufferCloseAllButPinned<CR>", opts)
     end,
     opts = {
         -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
@@ -43,6 +46,9 @@ return {
         auto_hide = 1,
 
         animation = false,
+        icons = {
+            pinned = { button = '', filename = true },
+        },
     },
     version = "^1.0.0", -- optional: only update when a new 1.x version is released
 }
