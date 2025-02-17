@@ -29,4 +29,8 @@ vim.keymap.set({ "n", "v" }, "<leader>p", '"+p')
 --save File
 map({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
 
+--Exit terminal mode
 map({ "n", "v" }, "<esc><esc>", ":noh<Cr>", { desc = "Clear search" })
+
+-- LSP diagnostic floating window
+map('n', 'J', '<cmd>lua vim.diagnostic.open_float()<CR>', { desc = "diagnostic pop up" })

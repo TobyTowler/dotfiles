@@ -71,6 +71,7 @@ return {
         vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "Go to definition" })
         vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
         vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code actions" })
+        -- vim.keymap.set("n", "J", vim.diagnostic.open_float(), {desc = "diagnostics popup"})
         vim.keymap.set("n", "K", function()
             vim.lsp.buf.hover()
         end)
