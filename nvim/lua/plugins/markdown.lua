@@ -22,6 +22,5 @@ return {
             })
         end
     },
-    -- { "preservim/vim-markdown" },
     { "bullets-vim/bullets.vim" },
 }
