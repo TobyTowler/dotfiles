@@ -21,6 +21,11 @@ return {
         vim.keymap.set("n", "<leader>e", ":Oil<Cr>", { desc = "toggle Oil" }),
         --     })
         -- end,
+        --
+        vim.keymap.set("n", "<leader>E", function()
+            vim.cmd("vsplit | wincmd l")
+            require("oil").open()
+        end),
 
         dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
         -- dependencies = { 'echasnovski/mini.icons' }, -- if you use standalone mini plugins

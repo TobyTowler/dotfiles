@@ -34,3 +34,5 @@ map({ "n", "v" }, "<esc><esc>", ":noh<Cr>", { desc = "Clear search" })
 
 -- LSP diagnostic floating window
 map('n', 'J', '<cmd>lua vim.diagnostic.open_float()<CR>', { desc = "diagnostic pop up" })
+
+
