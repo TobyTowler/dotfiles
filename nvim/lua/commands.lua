@@ -25,7 +25,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     callback = function()
         vim.api.nvim_set_hl(0, "BufferCurrent", {
             fg = "#ECEFF4", -- Brighter white for text
-            bg = "#1c2e40", -- Same as buffer background
             bg = "#2c3e50", -- Same as buffer background
             bold = true
         })
