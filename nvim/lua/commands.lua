@@ -15,10 +15,10 @@ vim.api.nvim_create_autocmd({ "VimResized" }, {
 })
 
 
-vim.api.nvim_create_autocmd("VimEnter", {
-    pattern = "*",
-    command = "cd " .. vim.fn.expand("%:p:h")
-})
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--     pattern = "*",
+--     command = "cd " .. vim.fn.expand("%:p:h")
+-- })
 
 -- vim.api.nvim_create_autocmd("ColorScheme", {
 --     pattern = "*",
@@ -306,3 +306,4 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 --         })
 --     end
 -- })
+--

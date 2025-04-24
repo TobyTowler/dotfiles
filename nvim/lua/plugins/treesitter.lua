@@ -11,12 +11,21 @@ return {
                 --     disable = { "latex" },
                 --     additional_vim_regex_highlighting = { "latex", "markdown" },
                 -- },
-                highlight = { enable = true },
+                highlight = {
+                    enable = true,
+                    -- disable = { "tex", "latex" }, -- Disable for LaTeX files
+                },
                 indent = { enable = true },
             })
         end,
         opts = {
-            highlight = { enable = true },
+            auto_install = true,
+
+            highlight = {
+                enable = true,
+
+                -- disable = { "tex", "latex" }, -- Disable for LaTeX files
+            },
             indent = { enable = true },
             ensure_installed = {
                 "bash",
