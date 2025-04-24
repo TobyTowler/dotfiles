@@ -1,0 +1,9 @@
+[user]
+	email = tobytowler11@gmail.com
+	name = Toby Towler
+
+
+[init]
+    defaultBranch = main
+[pull]
+	default = current
