@@ -56,7 +56,7 @@ bind -m emacs-standard '"\ed": " \C-b\C-k \C-u`__fzf_cd__`\e\C-e\er\C-m\C-y\C-h\
 # Add this to your .bashrc
 cdf() {
   local file
-  file=$(find . -type f -not -path "*/\.*" 2>/dev/null | fzf)
+  file=$(find . -type f -not -path "./.git/*" 2>/dev/null | fzf)
   if [ -n "$file" ]; then
     cd "$(dirname "$file")" || return
     echo "Changed directory to $(pwd)"
