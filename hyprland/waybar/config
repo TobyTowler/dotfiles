@@ -5,7 +5,7 @@
         "exclusive": true,
         "passthrough": false,
         "gtk-layer-shell": true,
-        "height": -2000,
+        //"height": -2000,
 
         "modules-left": [ "clock",
         ],
@@ -17,9 +17,11 @@
         "modules-right": [
         "tray",
         "pulseaudio",
+		"backlight",
         "battery",
         "cpu",
-       "memory",
+        "memory",
+		"network",
         "temperature"
         ],
         "hyprland/window": {
@@ -27,18 +29,18 @@
         },
 
         "hyprland/workspaces": {
-            "disable-scroll": true,
+            "disable-scroll": false,
             "all-outputs": true,
             "on-click": "activate",
+			"format-icons":{"urgent": "",
+            "focused": "",}
         },
+
         "tray": {
             "icon-size": 16,
             "spacing": 10
         },
         "clock": {
-            //"format": "{: %R   %d/%m}",
-            //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-            "format": "󰥔  {:%H:%M - %A, %B %e}",
             "format": "  {:%B %e, %A - %H:%M}",
             "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
             "interval": 60,
@@ -62,6 +64,15 @@
             }
         },
 
+        "network": {
+                // "interface": "wlp2*", // (Optional) To force the use of this interface
+                "format-wifi": "",
+                "format-ethernet": "󰈀",
+                "tooltip-format": "{ifname} via {gwaddr} ",
+                "format-linked": "{ifname} (No IP) ",
+                "format-disconnected": "⚠",
+                "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        },
         "temperature": {
             "thermal-zone": 2,
             "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
@@ -88,5 +99,7 @@
             "format": "󱐋 {capacity}%",
             "format-charging": " {capacity}%",
             "format-plugged": "🔌 {capacity}% "
-        }
+        },
+
 }
+
