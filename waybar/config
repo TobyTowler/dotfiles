@@ -7,7 +7,11 @@
         "gtk-layer-shell": true,
         //"height": -2000,
 
-        "modules-left": [ "clock",
+
+
+        "modules-left": [
+        "clock",
+        "tray",
         ],
 
         "modules-center": [
@@ -15,13 +19,12 @@
         ],
 
         "modules-right": [
-        "tray",
         "pulseaudio",
 		"backlight",
         "battery",
+		"network",
         "cpu",
         "memory",
-		"network",
         "temperature"
         ],
         "hyprland/window": {
@@ -91,7 +94,7 @@
             "critical-threshold": 80,
             "format-critical": "{icon} {temperatureC}°C",
             "format": "{icon} {temperatureC}°C",
-            "format-icons": ["", "", ""]
+            "format-icons": [""]
         },
 
         "cpu": {
@@ -110,7 +113,7 @@
             },
             "format": "󱐋 {capacity}%",
             "format-charging": " {capacity}%",
-            "format-plugged": "🔌 {capacity}% "
+            "format-plugged": " {capacity}%"
         },
 
 }

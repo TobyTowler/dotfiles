@@ -64,7 +64,7 @@ window#waybar {
 #memory {
     color: #89b4fa;
     border-radius: 10px;
-    margin: 1px 1px;
+    margin: 0px 1px;
     padding: 0px 7px;
     background: #1e1e2e;
 }
@@ -76,8 +76,11 @@ window#waybar {
 
 
 #clock {
-    margin-right: 12px;
+    margin: 0px 1px;
+    padding: 0px 7px;
+    /* margin-right: 5px; */
 }
+
 
 #battery.warning {
     color: #89b4fa;
@@ -86,5 +89,3 @@ window#waybar {
 #battery.critical {
     color: #e19239;
 }
-
-
