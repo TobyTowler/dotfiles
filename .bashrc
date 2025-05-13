@@ -1,5 +1,11 @@
 # .bashrc
 
+############
+# General
+############
+
+echo "Hello Toby!"
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
@@ -11,47 +17,34 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
 fi
 export PATH
 
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
-
-# User specific aliases and functions
-if [ -d ~/.bashrc.d ]; then
-	for rc in ~/.bashrc.d/*; do
-		if [ -f "$rc" ]; then
-			. "$rc"
-		fi
-	done
-fi
-unset rc
-
+############
 # Prompt
+############
 parse_git_branch() {
 	git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) / ' | tr '[:lower:]' '[:upper:]'
 }
 # export PS1=" \e[0;36m\W\e[0m \[\e[91m\]\$(parse_git_branch)\e[0;36m>> \e[0m "
-export PS1=" \e[0;36m\W\e[0m \[\e[91m\]\$(parse_git_branch)\e[0;36m🌧️\e[0m "
+export PS1="\n \e[0;36m\w\e[0m \[\e[91m\]\$(parse_git_branch)🌧️  \n\e[95m 󰅂\e[0m "
 # export PS1=" \e[0;36m\w\e[0m \[\e[91m\]\$(parse_git_branch)\e[0;36m🌧️\e[0m \n 󰅂 "
+#
 
+############
 # Aliases
+############
 alias nv='nvim'
 alias l='ls -a'
 alias ls='ls --color=auto'
 
-
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-#Exit binds
 alias :q='exit'
 alias :wqa='exit'
 
+############
 #FZF stuff
+############
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 #Bind alt-d instead of alt c
-bind -m emacs-standard '"\ed": " \C-b\C-k \C-u`__fzf_cd__`\e\C-e\er\C-m\C-y\C-h\e \C-y\ey\C-x\C-x\C-d"'
-
+# bind -m emacs-standard '"\ed": " \C-b\C-k \C-u`__fzf_cd__`\e\C-e\er\C-m\C-y\C-h\e \C-y\ey\C-x\C-x\C-d"'
+bind '"\ed": "\ec"'
 
 # Add this to your .bashrc
 cdf() {
@@ -65,11 +58,11 @@ cdf() {
   fi
 }
 
-bind '"\C-y": "cdf\n"'
+bind '"\C-f": "cdf\n"'
 
 
+############
+# Android
+############
 export PATH=$PATH:~/Android/Sdk/platform-tools
-
-
-
 
