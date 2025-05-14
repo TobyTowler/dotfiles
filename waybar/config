@@ -25,7 +25,7 @@
 		"network",
         "cpu",
         "memory",
-        "temperature"
+        "temperature",
         ],
         "hyprland/window": {
             "format": "{}"
@@ -50,20 +50,9 @@
         },
         "pulseaudio": {
             "format": "{icon} {volume}%",
-            "tooltip": false,
-            "format-muted": "󰸈 Muted",
-            "on-click": "pamixer -t",
-            "on-scroll-up": "pamixer -i 5",
-            "on-scroll-down": "pamixer -d 5",
-            "scroll-step": 5,
+            "format-muted": "",
             "format-icons": {
-                "headphone": "",
-                "hands-free": "",
-                "headset": "",
-                "phone": "",
-                "portable": "",
-                "car": "",
-                "default": ["", "", ""]
+            "default": ["", "", " "]            
             }
         },
 
@@ -76,7 +65,6 @@
     "network": {
         //"interface": "*", // Automatically detects any networjk interface
         "interface": ["wlan*", "wlp*", "wifi*"],
-        //"format-wifi": "{icon} {signalStrength}%",
         "format-wifi": "{icon}",
         "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
         "format-disconnected": "󰤮 Disconnected",
@@ -89,12 +77,9 @@
         "on-click": "nm-connection-editor"
     },
     "temperature": {
-            "thermal-zone": 2,
-            "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
             "critical-threshold": 80,
             "format-critical": "{icon} {temperatureC}°C",
-            "format": "{icon} {temperatureC}°C",
-            "format-icons": [""]
+            "format": " {temperatureC}°C",
         },
 
         "cpu": {
