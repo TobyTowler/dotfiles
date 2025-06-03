@@ -55,5 +55,5 @@ end
 -- Example usage:
 -- Create a floating window with default dimensions
 vim.api.nvim_create_user_command("Floaterminal", toggle_terminal, {})
-vim.keymap.set({ "n", "t", "v" }, "<leader>t", toggle_terminal, { desc = "Toggle floating terminal" })
-vim.keymap.set({ "n", "v" }, "T", toggle_terminal, { desc = "Toggle floating terminal" })
+-- vim.keymap.set({ "n", "t", "v" }, "<leader>t", toggle_terminal, { desc = "Toggle floating terminal" })
+-- vim.keymap.set({ "n", "v" }, "T", toggle_terminal, { desc = "Toggle floating terminal" })

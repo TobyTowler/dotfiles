@@ -33,7 +33,7 @@ return {
         map("n", "<C-0>", "<Cmd>BufferLast<CR>", opts)
 
         -- Pin/unpin buffer
-        map("n", "<C-p>", "<Cmd>BufferPin<CR>", opts)
+        -- map("n", "<C-p>", "<Cmd>BufferPin<CR>", opts)
 
         -- Close buffer
         map("n", "<S-x>", "<Cmd>BufferClose<CR>", opts)
